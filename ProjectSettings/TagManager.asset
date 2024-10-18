@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Transmission
+  - Steering Wheel
+  - Pedals
+  - Speedometer
+  - Line Renderer
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Road
+  - Intersection
+  - Prefab Line
+  - MinimapLine
+  - MinimapCar
+  - MinimapCarIcon
+  - MinimapLocationTag
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: MinimapLine
+    uniqueID: 1378444731
+    locked: 0
+  - name: MinimapCar
+    uniqueID: 2844867513
+    locked: 0
