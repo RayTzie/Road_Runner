@@ -1,4 +1,4 @@
-Using template 'C:/Program Files/Unity 2022.1.1f1/Editor/Data/PlaybackEngines/AndroidPlayer\Apk\UnityManifest.xml'
+Using template 'C:/Program Files/Unity/Hub/Editor/2022.1.1f1/Editor/Data/PlaybackEngines/AndroidPlayer\Apk\UnityManifest.xml'
 
 isGame application flag was added because:
 	Android TV Compatability was enabled
@@ -15,6 +15,7 @@ android.permission.INTERNET was added because:
 		Unity.Services.Core.Telemetry-FeaturesChecked.txt
 		Unity.Services.Core.Networking-FeaturesChecked.txt
 		Unity.Services.Core.Internal-FeaturesChecked.txt
+	Development player
 android.permission.ACCESS_NETWORK_STATE was added because:
 	UnityEngine.Application::get_internetReachability was present in:
 		Unity.Services.Core.Telemetry-FeaturesChecked.txt

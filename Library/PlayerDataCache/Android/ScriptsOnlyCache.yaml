@@ -1,7 +1,5 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-Editor.dll:
-    - UserProfileEditor
     Assembly-CSharp.dll:
     - CameraToggler
     - Camera_Controller_V1
@@ -12,16 +10,17 @@ ScriptsOnlyBuild:
     - MyCarSound
     - OnTriggerEnterAndExit
     - OverSpeeding
+    - OverSpeedingDeduction
     - Pedals_Controller
     - RoadCreatorPro.Intersection
     - RoadCreatorPro.Point
+    - RoadCreatorPro.PrefabLineCreator
     - RoadCreatorPro.RoadCreator
-    - RoadCreatorPro.RoadPreset
     - RoadCreatorPro.RoadSystem
     - RoadCreatorPro.SelectParent
     - RoadCreatorPro.TrafficLight
     - SceneLoader
-    - ScoreUpdater
+    - ScoreAnimation
     - SimpleCarController
     - Speedometer
     - SteeringWheel_Controller
@@ -106,12 +105,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
   methodsToPreserve:
-  - assembly: Assembly-CSharp
-    fullTypeName: Menu
-    methodName: ShowCloseMenuMain
-  - assembly: Assembly-CSharp
-    fullTypeName: Menu
-    methodName: ShowCloseMenuMain
   - assembly: Assembly-CSharp
     fullTypeName: Menu
     methodName: ShowCloseMenuMain
@@ -231,9 +224,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7052}
     - Class: 114
-      Script: {instanceID: 7466}
+      Script: {instanceID: 7468}
     - Class: 114
-      Script: {instanceID: 7840}
+      Script: {instanceID: 7846}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -265,6 +258,8 @@ ScriptsOnlyBuild:
     - Class: 258
       Script: {instanceID: 0}
     - Class: 850595691
+      Script: {instanceID: 0}
+    - Class: 1953259897
       Script: {instanceID: 0}
     Assets/scene1.unity:
     - Class: 1
@@ -348,13 +343,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7052}
     - Class: 114
-      Script: {instanceID: 7398}
+      Script: {instanceID: 7400}
     - Class: 114
-      Script: {instanceID: 7658}
+      Script: {instanceID: 7660}
     - Class: 114
-      Script: {instanceID: 7782}
+      Script: {instanceID: 7788}
     - Class: 114
-      Script: {instanceID: 8118}
+      Script: {instanceID: 8124}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -463,6 +458,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 5196}
     - Class: 114
+      Script: {instanceID: 5228}
+    - Class: 114
       Script: {instanceID: 5274}
     - Class: 114
       Script: {instanceID: 5326}
@@ -489,15 +486,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7324}
     - Class: 114
-      Script: {instanceID: 7466}
+      Script: {instanceID: 7380}
     - Class: 114
-      Script: {instanceID: 7766}
+      Script: {instanceID: 7468}
     - Class: 114
-      Script: {instanceID: 7782}
+      Script: {instanceID: 7708}
     - Class: 114
-      Script: {instanceID: 7840}
+      Script: {instanceID: 7760}
     - Class: 114
-      Script: {instanceID: 35320}
+      Script: {instanceID: 7772}
+    - Class: 114
+      Script: {instanceID: 7788}
+    - Class: 114
+      Script: {instanceID: 7846}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -538,166 +539,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 850595691
       Script: {instanceID: 0}
-    Assets/scene_map2.unity:
-    - Class: 1
-      Script: {instanceID: 0}
-    - Class: 4
-      Script: {instanceID: 0}
-    - Class: 20
-      Script: {instanceID: 0}
-    - Class: 21
-      Script: {instanceID: 0}
-    - Class: 23
-      Script: {instanceID: 0}
-    - Class: 28
-      Script: {instanceID: 0}
-    - Class: 33
-      Script: {instanceID: 0}
-    - Class: 43
-      Script: {instanceID: 0}
-    - Class: 48
-      Script: {instanceID: 0}
-    - Class: 54
-      Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
-    - Class: 65
-      Script: {instanceID: 0}
-    - Class: 72
-      Script: {instanceID: 0}
-    - Class: 81
-      Script: {instanceID: 0}
-    - Class: 82
-      Script: {instanceID: 0}
-    - Class: 83
-      Script: {instanceID: 0}
-    - Class: 86
-      Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
-    - Class: 90
-      Script: {instanceID: 0}
-    - Class: 95
-      Script: {instanceID: 0}
-    - Class: 102
-      Script: {instanceID: 0}
-    - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
-      Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 1548}
-    - Class: 114
-      Script: {instanceID: 1744}
-    - Class: 114
-      Script: {instanceID: 1806}
-    - Class: 114
-      Script: {instanceID: 1886}
-    - Class: 114
-      Script: {instanceID: 2116}
-    - Class: 114
-      Script: {instanceID: 2322}
-    - Class: 114
-      Script: {instanceID: 2624}
-    - Class: 114
-      Script: {instanceID: 2740}
-    - Class: 114
-      Script: {instanceID: 2842}
-    - Class: 114
-      Script: {instanceID: 3138}
-    - Class: 114
-      Script: {instanceID: 3742}
-    - Class: 114
-      Script: {instanceID: 3940}
-    - Class: 114
-      Script: {instanceID: 4026}
-    - Class: 114
-      Script: {instanceID: 4048}
-    - Class: 114
-      Script: {instanceID: 4152}
-    - Class: 114
-      Script: {instanceID: 4324}
-    - Class: 114
-      Script: {instanceID: 4924}
-    - Class: 114
-      Script: {instanceID: 4970}
-    - Class: 114
-      Script: {instanceID: 5106}
-    - Class: 114
-      Script: {instanceID: 5196}
-    - Class: 114
-      Script: {instanceID: 5274}
-    - Class: 114
-      Script: {instanceID: 5326}
-    - Class: 114
-      Script: {instanceID: 5470}
-    - Class: 114
-      Script: {instanceID: 5610}
-    - Class: 114
-      Script: {instanceID: 5796}
-    - Class: 114
-      Script: {instanceID: 5952}
-    - Class: 114
-      Script: {instanceID: 6040}
-    - Class: 114
-      Script: {instanceID: 6088}
-    - Class: 114
-      Script: {instanceID: 6284}
-    - Class: 114
-      Script: {instanceID: 6648}
-    - Class: 114
-      Script: {instanceID: 6730}
-    - Class: 114
-      Script: {instanceID: 7052}
-    - Class: 114
-      Script: {instanceID: 7324}
-    - Class: 114
-      Script: {instanceID: 7466}
-    - Class: 114
-      Script: {instanceID: 7766}
-    - Class: 114
-      Script: {instanceID: 7782}
-    - Class: 114
-      Script: {instanceID: 7840}
-    - Class: 115
-      Script: {instanceID: 0}
-    - Class: 120
-      Script: {instanceID: 0}
-    - Class: 124
-      Script: {instanceID: 0}
-    - Class: 128
-      Script: {instanceID: 0}
-    - Class: 135
-      Script: {instanceID: 0}
-    - Class: 137
-      Script: {instanceID: 0}
-    - Class: 146
-      Script: {instanceID: 0}
-    - Class: 154
-      Script: {instanceID: 0}
-    - Class: 156
-      Script: {instanceID: 0}
-    - Class: 157
-      Script: {instanceID: 0}
-    - Class: 196
-      Script: {instanceID: 0}
-    - Class: 205
-      Script: {instanceID: 0}
-    - Class: 212
-      Script: {instanceID: 0}
-    - Class: 213
-      Script: {instanceID: 0}
-    - Class: 218
-      Script: {instanceID: 0}
-    - Class: 222
-      Script: {instanceID: 0}
-    - Class: 223
-      Script: {instanceID: 0}
-    - Class: 224
-      Script: {instanceID: 0}
-    - Class: 258
-      Script: {instanceID: 0}
-    - Class: 850595691
+    - Class: 1953259897
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -1584,6 +1426,12 @@ ScriptsOnlyBuild:
     className: ControlTrack
   - hash:
       serializedVersion: 2
+      Hash: bccd39180891290ee8ecd95277143fe5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TimeAccumulator
+  - hash:
+      serializedVersion: 2
       Hash: 91f6e50cce422f3665f0baf787fd7c8c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1626,10 +1474,22 @@ ScriptsOnlyBuild:
     className: Variables
   - hash:
       serializedVersion: 2
+      Hash: 1e7170f78ce6e98f00e5920419f3f58d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScoreAnimation
+  - hash:
+      serializedVersion: 2
       Hash: f6831ac80ec81c5d5b370c0ed0fee997
     assemblyName: Unity.VisualScripting.State.dll
     namespaceName: Unity.VisualScripting
     className: StateMachine
+  - hash:
+      serializedVersion: 2
+      Hash: 3ddc8f3565c10fe8ea841f528ed66f45
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: OverSpeedingDeduction
   - hash:
       serializedVersion: 2
       Hash: be6ad451e55b68ccfde9c860fe5b7811
@@ -1696,16 +1556,9 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
-  - hash:
-      serializedVersion: 2
-      Hash: bccd39180891290ee8ecd95277143fe5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TimeAccumulator
   platform: 13
   scenePathNames:
   - Assets/scene1.unity
   - Assets/ingame.unity
-  - Assets/scene_map2.unity
   - Assets/scene_map1_mission_1.unity
-  playerPath: C:/Users/Administrator/Desktop/Road Runner Unity 2022/Apk/Road Runner.apk
+  playerPath: C:/Users/NITRO 5/Desktop/Road Runner Unity 2022/10steerangle.apk
