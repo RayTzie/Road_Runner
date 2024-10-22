@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
+  m_IndirectSpecularColor: {r: 0.44402218, g: 0.49316543, b: 0.572232, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1210,7 +1210,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1644538024}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.36212686
+  m_Size: 0.3621306
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -8978,7 +8978,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.038251366, y: 0}
   m_AnchorMax: {x: 0.9781421, y: 0.89000005}
-  m_AnchoredPosition: {x: -7, y: 21.999973}
+  m_AnchoredPosition: {x: -7, y: 21.999985}
   m_SizeDelta: {x: 11, y: 374.28183}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &1208266712
@@ -9957,7 +9957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90841ad31b08439418a8cb74a371f2b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userProfile: {fileID: 11400000, guid: b7094f6f574214348bc0cf238c6bebb9, type: 2}
+  userProfile: {fileID: 11400000, guid: 6d16e5683aa6fb44793ab77262083b0d, type: 2}
   playerNameText: {fileID: 13767852}
   playerPictureImage: {fileID: 1682015210}
   playerScoreText: {fileID: 414156557}

@@ -27,7 +27,7 @@ public class UserProfile : ScriptableObject
     // Function to reset all values
     public void ResetValues()
     {
-        //playerName = string.Empty;
+        playerName = string.Empty;
         //playerPicture = null;
         score = 100;
         roadtrafficsignscore = 100;
@@ -40,6 +40,7 @@ public class UserProfile : ScriptableObject
     // Save the score to PlayerPrefs for persistence on mobile
     public void SaveUserProfile()
     {
+        PlayerPrefs.SetString("PlayerName", playerName);
         PlayerPrefs.SetInt("PlayerScore", score);
         PlayerPrefs.SetInt("RoadTrafficSignScore", roadtrafficsignscore);
         PlayerPrefs.SetInt("PavementMarkingSignScore", pavementmarkingsignscore);

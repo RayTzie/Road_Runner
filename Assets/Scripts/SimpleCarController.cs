@@ -26,7 +26,7 @@ public class SimpleCarController : MonoBehaviour {
 	
 	public Transform steeringWheel; // Steering Wheel
 
-	public float maxSteerAngle = 45;
+	public float maxSteerAngle = 10;
 	public float motorForce;
 	public float breakForce;
 	public float speed;
