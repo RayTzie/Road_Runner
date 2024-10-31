@@ -33,7 +33,7 @@ public class TurnsCounter : MonoBehaviour
                 targetObjects[i] = null;
 
                 // Check if the player has hit 12 objects
-                if (collisionCount == 2 && messageCanvas != null)
+                if (collisionCount == 12 && messageCanvas != null)
                 {
                     messageCanvas.SetActive(true); // Show the canvas
                 }
