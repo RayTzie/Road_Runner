@@ -316,6 +316,8 @@
 "Assets/MiniMap/MinimapCar.cs"
 "Assets/MiniMap/PathVisualizer.cs"
 "Assets/MiniMap/RouteDrawer.cs"
+"Assets/Scripts/AI Car/CarSpawner.cs"
+"Assets/Scripts/AI Car/VehiclePathFollowing.cs"
 "Assets/Scripts/CameraToggler.cs"
 "Assets/Scripts/Camera_Controller_V1.cs"
 "Assets/Scripts/DigitalSpeedometer.cs"
