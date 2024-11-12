@@ -9910,6 +9910,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d64f1224cf891418dff40d6c2d2e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userProfile: {fileID: 0}
+  missionPassedCanvas: {fileID: 0}
+  missionFailedCanvas: {fileID: 0}
   TargetObject: {fileID: 377207350}
   Canvas: {fileID: 371227892}
   pauseKey: 27
@@ -36516,6 +36519,10 @@ MonoBehaviour:
   - {fileID: 999185272}
   - {fileID: 1186783641}
   - {fileID: 1136669697}
+  forwardOffset: 7
+  size: 9.5
+  minimapCamera: {fileID: 1317626189}
+  useOffset: 1
 --- !u!1001 &1320808393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43900,6 +43907,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00d64f1224cf891418dff40d6c2d2e60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userProfile: {fileID: 0}
+  missionPassedCanvas: {fileID: 0}
+  missionFailedCanvas: {fileID: 0}
   TargetObject: {fileID: 1645603473}
   Canvas: {fileID: 142411314}
   pauseKey: 27
@@ -57545,6 +57555,11 @@ MonoBehaviour:
   playerNameText: {fileID: 7208778256299796453}
   playerPictureImage: {fileID: 7208778255705092259}
   playerScoreText: {fileID: 7208778255895278660}
+  roadTrafficSignScoreText: {fileID: 0}
+  pavementMarkingSignScoreText: {fileID: 0}
+  drivingOnTheRoadSignScoreText: {fileID: 0}
+  totalDriveSignScoreText: {fileID: 0}
+  readableSignScoreText: {fileID: 0}
 --- !u!222 &7208778255019888197
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -58418,6 +58433,11 @@ MonoBehaviour:
   playerNameText: {fileID: 8848095308054237196}
   playerPictureImage: {fileID: 8848095308707387776}
   playerScoreText: {fileID: 8848095308145824244}
+  roadTrafficSignScoreText: {fileID: 0}
+  pavementMarkingSignScoreText: {fileID: 0}
+  drivingOnTheRoadSignScoreText: {fileID: 0}
+  totalDriveSignScoreText: {fileID: 0}
+  readableSignScoreText: {fileID: 0}
 --- !u!222 &8848095307662732465
 CanvasRenderer:
   m_ObjectHideFlags: 0
