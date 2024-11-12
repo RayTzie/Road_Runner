@@ -2145,4 +2145,4 @@ ScriptsOnlyBuild:
   - Assets/scene_map1_mission_1.unity
   - Assets/scene_map1_mission_2.unity
   - Assets/scene_map1_mission_3.unity
-  playerPath: C:/Users/Administrator/Desktop/Road Runner Unity 2022/Apk/Road Runner.apk
+  playerPath: F:/Road Runner.apk
