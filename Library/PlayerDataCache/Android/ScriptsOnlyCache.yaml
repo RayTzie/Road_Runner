@@ -138,29 +138,8 @@ ScriptsOnlyBuild:
     fullTypeName: OnTriggerEnterAndExit
     methodName: CloseWindow
   - assembly: Assembly-CSharp
-    fullTypeName: OnTriggerEnterAndExit
-    methodName: CloseWindow
-  - assembly: Assembly-CSharp
-    fullTypeName: Menu
-    methodName: ShowCloseMenuMain
-  - assembly: Assembly-CSharp
-    fullTypeName: OnTriggerEnterAndExit
-    methodName: CloseWindow
-  - assembly: Assembly-CSharp
-    fullTypeName: Menu
-    methodName: ShowCloseMenuMain
-  - assembly: Assembly-CSharp
-    fullTypeName: Menu
-    methodName: ShowCloseMenuMain
-  - assembly: Assembly-CSharp
-    fullTypeName: OnTriggerEnterAndExit
-    methodName: CloseWindow
-  - assembly: Assembly-CSharp
-    fullTypeName: OnTriggerEnterAndExit
-    methodName: CloseWindow
-  - assembly: Assembly-CSharp
-    fullTypeName: OnTriggerEnterAndExit
-    methodName: CloseWindow
+    fullTypeName: SceneLoader
+    methodName: LoadSceneByName
   - assembly: Assembly-CSharp
     fullTypeName: OnTriggerEnterAndExit
     methodName: CloseWindow
@@ -182,6 +161,36 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: OnTriggerEnterAndExit
     methodName: CloseWindow
+  - assembly: Assembly-CSharp
+    fullTypeName: OnTriggerEnterAndExit
+    methodName: CloseWindow
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneLoader
+    methodName: LoadSceneByName
+  - assembly: Assembly-CSharp
+    fullTypeName: OnTriggerEnterAndExit
+    methodName: CloseWindow
+  - assembly: Assembly-CSharp
+    fullTypeName: Menu
+    methodName: ShowCloseMenuMain
+  - assembly: Assembly-CSharp
+    fullTypeName: OnTriggerEnterAndExit
+    methodName: CloseWindow
+  - assembly: Assembly-CSharp
+    fullTypeName: Menu
+    methodName: ShowCloseMenuMain
+  - assembly: Assembly-CSharp
+    fullTypeName: Menu
+    methodName: ShowCloseMenuMain
+  - assembly: Assembly-CSharp
+    fullTypeName: OnTriggerEnterAndExit
+    methodName: CloseWindow
+  - assembly: Assembly-CSharp
+    fullTypeName: OnTriggerEnterAndExit
+    methodName: CloseWindow
+  - assembly: Assembly-CSharp
+    fullTypeName: SceneLoader
+    methodName: LoadSceneByName
   - assembly: Assembly-CSharp
     fullTypeName: OnTriggerEnterAndExit
     methodName: CloseWindow
@@ -546,6 +555,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7470}
     - Class: 114
+      Script: {instanceID: 7664}
+    - Class: 114
       Script: {instanceID: 7712}
     - Class: 114
       Script: {instanceID: 7764}
@@ -717,6 +728,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7470}
     - Class: 114
+      Script: {instanceID: 7664}
+    - Class: 114
       Script: {instanceID: 7712}
     - Class: 114
       Script: {instanceID: 7764}
@@ -887,6 +900,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 7470}
     - Class: 114
       Script: {instanceID: 7554}
+    - Class: 114
+      Script: {instanceID: 7664}
     - Class: 114
       Script: {instanceID: 7712}
     - Class: 114
@@ -1809,7 +1824,7 @@ ScriptsOnlyBuild:
     className: MyCarSound
   - hash:
       serializedVersion: 2
-      Hash: 72128c8ae3de6177b4a7bf26741534b4
+      Hash: f08ecb51bd234a97b8ccfc161c39e427
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Minimap
@@ -2145,4 +2160,4 @@ ScriptsOnlyBuild:
   - Assets/scene_map1_mission_1.unity
   - Assets/scene_map1_mission_2.unity
   - Assets/scene_map1_mission_3.unity
-  playerPath: F:/Road Runner.apk
+  playerPath: F:/Road Runner_November-11-2024.apk
