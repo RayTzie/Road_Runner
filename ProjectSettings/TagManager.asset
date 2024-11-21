@@ -9,6 +9,7 @@ TagManager:
   - Pedals
   - Speedometer
   - Line Renderer
+  - AI Vehicle
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Obstacle
   - 
   - Road
   - Intersection
