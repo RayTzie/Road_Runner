@@ -6,27 +6,18 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/scene1.unity
+    path: Assets/Gameplay Scene/Intro Scene.unity
+    guid: 1554881e56f6b9345b36407ce33347cc
+  - enabled: 1
+    path: Assets/Gameplay Scene/Main Menu.unity
     guid: 4416044315c6ff34093c6d38849fd57d
   - enabled: 1
-    path: Assets/ingame.unity
-    guid: 1a2f4cb4411d3cd48a3207e1684e23f9
-  - enabled: 0
-    path: 
-    guid: beca1a0a3e52f6a4f98d39744d1280e1
-  - enabled: 1
-    path: Assets/scene_map2_mission_2.unity
-    guid: cb37b6b604a8a2341abdf8a64a40e03d
-  - enabled: 1
-    path: Assets/scene_map1_mission_1.unity
+    path: Assets/Gameplay Scene/Village Ignacio FilInvest.unity
     guid: ea2cd0f4ee0a092419b0e8c1c9ffbb2e
   - enabled: 1
-    path: Assets/scene_map1_mission_2.unity
-    guid: 46b3cbc84af2cf941aff20c19f5695ec
+    path: Assets/Gameplay Scene/Mayor Jaldon Street.unity
+    guid: 885c7214974c8a447866a2f28086a52d
   - enabled: 1
-    path: Assets/scene_map1_mission_3.unity
-    guid: 3a09eb707fa05a449ab7442a62310539
-  - enabled: 1
-    path: Assets/scene_map2_mission_1.unity
-    guid: b2fbd040d4a6e1447aefe96edc06c14a
+    path: Assets/Gameplay Scene/Centro Pueblo.unity
+    guid: 4c39557aea4029842b0210a9e02944f7
   m_configObjects: {}

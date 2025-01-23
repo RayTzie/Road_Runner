@@ -3,13 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Transmission
-  - Steering Wheel
-  - Pedals
-  - Speedometer
-  - Line Renderer
-  - AI Vehicle
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -17,15 +11,15 @@ TagManager:
   - 
   - Water
   - UI
-  - Obstacle
   - 
-  - Road
-  - Intersection
-  - Prefab Line
-  - MinimapLine
-  - MinimapCar
-  - MinimapCarIcon
-  - MinimapLocationTag
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -46,10 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: MinimapLine
-    uniqueID: 1378444731
-    locked: 0
-  - name: MinimapCar
-    uniqueID: 2844867513
     locked: 0
