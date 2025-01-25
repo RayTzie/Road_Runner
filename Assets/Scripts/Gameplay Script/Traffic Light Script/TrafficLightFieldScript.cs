@@ -1,0 +1,34 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Deduction.Manager;
+
+namespace TrafficLight
+{
+	public class TrafficLightFieldScript : MonoBehaviour
+	{
+		[SerializeField]
+		DeductionManagerScript MainDeduction;
+		// Start is called before the first frame update
+		void Start()
+		{
+
+		}
+
+		// Update is called once per frame
+		void Update()
+		{
+
+		}
+
+		private void OnTriggerEnter(Collider col)
+		{
+			//Debug.Log("Hit Border");
+			if (col.CompareTag("Main Player"))
+			{
+				MainDeduction.TrafficLightViolationActivate();
+			}
+		}
+	}
+}
+

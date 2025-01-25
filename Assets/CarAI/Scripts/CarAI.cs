@@ -33,7 +33,8 @@ public class CarAI : MonoBehaviour
     public bool Patrol = true;
     public Transform CustomDestination;
    
-    [HideInInspector] public bool move;
+    //[HideInInspector] 
+	public bool move;
 
     private Vector3 PostionToFollow = Vector3.zero;
     public int currentWayPoint;
@@ -53,7 +54,7 @@ public class CarAI : MonoBehaviour
     {
         currentWayPoint = 0;
         allowMovement = true;
-        move = true;
+        //move = true;
     }
 
     void Start()

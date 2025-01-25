@@ -29,7 +29,7 @@ public class OnTriggerEnterAndExit : MonoBehaviour
 
 	void PauseGame(bool paused)
 	{
-		Time.timeScale = paused ? 0f : 1f;
+		//Time.timeScale = paused ? 0f : 1f;
 	}
 
 	public void CloseWindow(){

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Mobile.AsyncAndroid;
 
 public class SimpleCarController : MonoBehaviour {
 
@@ -26,21 +26,35 @@ public class SimpleCarController : MonoBehaviour {
 	
 	public Transform steeringWheel; // Steering Wheel
 
-	public float maxSteerAngle = 45;
+	public float maxSteerAngle;
+	[SerializeField]
+	float DefaultmaxSteerAngle;
 	public float motorForce;
+	[SerializeField]
+	float DefaultMotorForce;
 	public float breakForce;
 	public float speed;
 
+	public bool HandBrake;
+	AndroidSnapSystem AsyncSnapDragon;
 	public void Start()
 	{
-		  SteeringAngle = GameObject.FindWithTag ("Steering Wheel").GetComponent<SteeringWheel_Controller>();
+
+		AsyncSnapDragon = GameObject.FindObjectOfType<AndroidSnapSystem>();
+
+		if (AsyncSnapDragon == null)
+		{
+			Destroy(this.gameObject);
+		}
+
+		SteeringAngle = GameObject.FindWithTag ("Steering Wheel").GetComponent<SteeringWheel_Controller>();
 		  TransmissionState = GameObject.FindWithTag ("Pedals").GetComponent<Pedals_Controller>();
 		  Speed = GameObject.FindWithTag ("Pedals").GetComponent<Pedals_Controller>();
 		  SpeedMeter = GameObject.FindWithTag ("Player").GetComponent<OverSpeeding>();
 		  BreakValue = GameObject.FindWithTag ("Pedals").GetComponent<Pedals_Controller>();
 		  BreakInput = GameObject.FindWithTag ("Pedals").GetComponent<Pedals_Controller>();
-		 
 
+		maxSteerAngle = DefaultmaxSteerAngle;
 	}
 
 	public void GetInput()
@@ -61,7 +75,7 @@ public class SimpleCarController : MonoBehaviour {
 		//frontPassengerW.motorTorque = m_verticalInput * motorForce;
 		
 		// The motor force value is return by maxSpeed variable from Speedometer script.
-       motorForce  = 350;
+       motorForce  = DefaultMotorForce;
        //Debug.Log(motorForce);
        
     	// The speed value is used to trigger/update the speed on speedometer script.
@@ -88,6 +102,16 @@ public class SimpleCarController : MonoBehaviour {
     	
 
     }
+
+	public void HandBrakeActivate()
+	{
+		//m_breakInputValue = BreakInput.GetBreakValue();
+
+		frontDriverW.brakeTorque = 500;
+		frontPassengerW.brakeTorque = 500;
+		rearDriverW.brakeTorque = 500;
+		rearPassengerW.brakeTorque = 500;
+	}
 
 
 	private void Steer()
@@ -119,17 +143,27 @@ public class SimpleCarController : MonoBehaviour {
 		_transform.rotation = _quat;
 	}
 
-
+	private void Update()
+	{
+		if (HandBrake)
+		{
+			HandBrakeActivate();
+		}
+	}
 
 	private void FixedUpdate()
 	{
-		GetInput();
-		Steer();
-		Accelerate();
+		if (!HandBrake)
+		{
+			GetInput();
+			Steer();
+			Accelerate();
+
+			Brake();
+			GetBreakInput();
+			UpdateWheelPoses();
+		}
 		
-		Brake();
-		GetBreakInput();
-		UpdateWheelPoses();
 		//m_steeringAngle = SteeringAngle.wheelAngle;
 		
 	}
