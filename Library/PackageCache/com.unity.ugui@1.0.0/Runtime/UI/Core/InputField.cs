@@ -320,6 +320,7 @@ namespace UnityEngine.UI
         private bool m_HasDoneFocusTransition = false;
         private WaitForSecondsRealtime m_WaitForSecondsRealtime;
         private bool m_TouchKeyboardAllowsInPlaceEditing = false;
+        private bool m_IsCompositionActive = false;
 
         private BaseInput input
         {
@@ -1382,6 +1383,26 @@ namespace UnityEngine.UI
             return !s_IsQuestDevice && m_TouchKeyboardAllowsInPlaceEditing != TouchScreenKeyboard.isInPlaceEditingAllowed;
         }
 
+        RangeInt GetInternalSelection()
+        {
+            var selectionStart = Mathf.Min(caretSelectPositionInternal, caretPositionInternal);
+            var selectionLength = Mathf.Abs(caretSelectPositionInternal - caretPositionInternal);
+            return new RangeInt(selectionStart, selectionLength);
+        }
+
+        void UpdateKeyboardCaret()
+        {
+            // On iOS/tvOS we only update SoftKeyboard selection when we know that it might have changed by touch/pointer interactions with InputField
+            // Setting the TouchScreenKeyboard selection here instead of LateUpdate so that we wouldn't override
+            // TouchScreenKeyboard selection when it's changed with cmd+a/ctrl+a/arrow/etc. in the TouchScreenKeyboard
+            // This is only applicable for iOS/tvOS as we have instance of TouchScreenKeyboard even when external keyboard is connected
+            if (m_HideMobileInput && m_Keyboard != null && m_Keyboard.canSetSelection &&
+                (Application.platform == RuntimePlatform.IPhonePlayer || Application.platform == RuntimePlatform.tvOS))
+            {
+                m_Keyboard.selection = GetInternalSelection();
+            }
+        }
+
         void UpdateCaretFromKeyboard()
         {
             var selectionRange = m_Keyboard.selection;
@@ -1525,17 +1546,17 @@ namespace UnityEngine.UI
                     SendOnValueChangedAndUpdateLabel();
                 }
             }
-            else if (m_HideMobileInput && m_Keyboard.canSetSelection)
+            // On iOS/tvOS we always have TouchScreenKeyboard instance even when using external keyboard
+            // so we keep track of the caret position there
+            else if (m_HideMobileInput && m_Keyboard != null && m_Keyboard.canSetSelection &&
+                     Application.platform != RuntimePlatform.IPhonePlayer && Application.platform != RuntimePlatform.tvOS)
             {
-                var selectionStart = Mathf.Min(caretSelectPositionInternal, caretPositionInternal);
-                var selectionLength = Mathf.Abs(caretSelectPositionInternal - caretPositionInternal);
-                m_Keyboard.selection = new RangeInt(selectionStart, selectionLength);
+                m_Keyboard.selection = GetInternalSelection();
             }
-            else if (m_Keyboard.canGetSelection && !m_HideMobileInput)
+            else if (m_Keyboard != null && m_Keyboard.canGetSelection)
             {
                 UpdateCaretFromKeyboard();
             }
-
 
             if (m_Keyboard.status != TouchScreenKeyboard.Status.Visible)
             {
@@ -1688,6 +1709,7 @@ namespace UnityEngine.UI
             if (m_DragPositionOutOfBounds && m_DragCoroutine == null)
                 m_DragCoroutine = StartCoroutine(MouseDragOutsideRect(eventData));
 
+            UpdateKeyboardCaret();
             eventData.Use();
         }
 
@@ -1774,6 +1796,7 @@ namespace UnityEngine.UI
             }
 
             UpdateLabel();
+            UpdateKeyboardCaret();
             eventData.Use();
         }
 
@@ -1967,6 +1990,9 @@ namespace UnityEngine.UI
 
         private bool IsValidChar(char c)
         {
+            if (c == 0)
+                return false;
+
             // Delete key on mac
             if ((int)c == 127)
                 return false;
@@ -2006,6 +2032,17 @@ namespace UnityEngine.UI
                 if (m_ProcessingEvent.rawType == EventType.KeyDown)
                 {
                     consumedEvent = true;
+
+                    // Special handling on OSX which produces more events which need to be suppressed.
+                    if (m_IsCompositionActive && compositionString.Length == 0)
+                    {
+                        // Suppress other events related to navigation or termination of composition sequence.
+                        if (m_ProcessingEvent.character == 0 && m_ProcessingEvent.modifiers == EventModifiers.None)
+                        {
+                            continue;
+                        }
+                    }
+
                     var shouldContinue = KeyPressed(m_ProcessingEvent);
                     if (shouldContinue == EditState.Finish)
                     {
@@ -2013,8 +2050,9 @@ namespace UnityEngine.UI
                             SendOnSubmit();
 
                         DeactivateInputField();
-                        break;
+                        continue;
                     }
+                    UpdateLabel();
                 }
 
                 switch (m_ProcessingEvent.type)
@@ -2464,10 +2502,17 @@ namespace UnityEngine.UI
                 m_PreventFontCallback = true;
 
                 string fullText;
+
                 if (EventSystem.current != null && gameObject == EventSystem.current.currentSelectedGameObject && compositionString.Length > 0)
+                {
+                    m_IsCompositionActive = true;
                     fullText = text.Substring(0, m_CaretPosition) + compositionString + text.Substring(m_CaretPosition);
+                }
                 else
+                {
+                    m_IsCompositionActive = false;
                     fullText = text;
+                }
 
                 string processed;
                 if (inputType == InputType.Password)
@@ -2493,7 +2538,7 @@ namespace UnityEngine.UI
                 // To fix case 1320719; we need to rebuild the layout before we check the number of characters that can fit within the extents.
                 // Otherwise, the extents provided may not be good.
                 textComponent.SetLayoutDirty();
-                Canvas.ForceUpdateCanvases();
+
 
                 if (!isEmpty)
                 {
