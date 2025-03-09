@@ -10,10 +10,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{453149CA-E0A6-5774-5F48-9F319266E5D7}</ProjectGuid>
+    <ProjectGuid>{C10CACDE-1A63-C1A9-50A5-784DFC4D8CAA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
+    <AssemblyName>AlmostEngine.SimpleLocalization.Editor</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -60,26 +60,12 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.32f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Unity Road Creator Pro\Scripts\Editor\TrafficLightEditor.cs" />
-    <Compile Include="Assets\Unity Road Creator Pro\Scripts\Editor\PointSystemEditor.cs" />
-    <Compile Include="Assets\Unity Road Creator Pro\Scripts\Editor\SelectParentEditor.cs" />
-    <Compile Include="Assets\Unity Road Creator Pro\Scripts\Editor\EditPointOverlay.cs" />
-    <Compile Include="Assets\Unity Road Creator Pro\Scripts\Editor\RoadSystemToolbarOverlay.cs" />
-    <Compile Include="Assets\CarAI\NavMeshComponents\Editor\NavMeshModifierEditor.cs" />
-    <Compile Include="Assets\Unity Road Creator Pro\Scripts\Editor\RoadEditor.cs" />
-    <Compile Include="Assets\CarAI\NavMeshComponents\Editor\NavMeshLinkEditor.cs" />
-    <Compile Include="Assets\Unity Road Creator Pro\Scripts\Editor\RoadSystemEditor.cs" />
-    <Compile Include="Assets\Unity Road Creator Pro\Scripts\Editor\IntersectionEditor.cs" />
-    <Compile Include="Assets\Editor\UserProfileEditor.cs" />
-    <Compile Include="Assets\Unity Road Creator Pro\Scripts\Editor\GenerateSplatmapWindow.cs" />
-    <Compile Include="Assets\Unity Road Creator Pro\Scripts\Editor\PrefabLinePresetEditor.cs" />
-    <Compile Include="Assets\Unity Road Creator Pro\Scripts\Editor\PrefabLineEditor.cs" />
-    <Compile Include="Assets\Unity Road Creator Pro\Scripts\Editor\ProhibitedAreaEditor.cs" />
-    <Compile Include="Assets\CarAI\NavMeshComponents\Editor\NavMeshSurfaceEditor.cs" />
-    <Compile Include="Assets\CarAI\NavMeshComponents\Editor\NavMeshModifierVolumeEditor.cs" />
-    <Compile Include="Assets\Unity Road Creator Pro\Scripts\Editor\GameObjectMenuButtons.cs" />
-    <Compile Include="Assets\Unity Road Creator Pro\Scripts\Editor\RoadPresetEditor.cs" />
-    <Compile Include="Assets\CarAI\NavMeshComponents\Editor\NavMeshComponentsGUIUtility.cs" />
+    <Compile Include="Assets\AlmostEngine\SimpleLocalization\Assets\Editor\Scripts\LanguagesDrawer.cs" />
+    <Compile Include="Assets\AlmostEngine\SimpleLocalization\Assets\Editor\Scripts\SimpleTextLocalizerInspector.cs" />
+    <Compile Include="Assets\AlmostEngine\SimpleLocalization\Assets\Editor\Scripts\SimpleImageLocalizerInspector.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\AlmostEngine\SimpleLocalization\Assets\Editor\AlmostEngine.SimpleLocalization.Editor.asmdef" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -982,6 +968,14 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.32f1\Editor\Data\UnityReferenceAssemblies\unity-4.8-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEditor.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEngine.TestRunner">
       <HintPath>Library\ScriptAssemblies\UnityEngine.TestRunner.dll</HintPath>
       <Private>False</Private>
@@ -990,131 +984,15 @@
       <HintPath>Library\ScriptAssemblies\UnityEditor.TestRunner.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.EditorCoroutines.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
-      <HintPath>Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Shared.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-      <HintPath>Library\ScriptAssemblies\UnityEditor.UI.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow.Editor">
-      <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{57B0017D-3B4F-1324-5759-F2C96B87266A}</Project>
-      <Name>Assembly-CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="AlmostEngine.csproj">
-      <Project>{EBC9EBAE-762E-E66F-E893-7A65FAF5BCF0}</Project>
-      <Name>AlmostEngine</Name>
-    </ProjectReference>
-    <ProjectReference Include="AlmostEngine.Shared.Editor.csproj">
-      <Project>{A262F422-36BD-DBF8-D85F-52CEED3B91AC}</Project>
-      <Name>AlmostEngine.Shared.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="AlmostEngine.UltimateScreenshotCreator.Editor.csproj">
-      <Project>{965F3E54-5AE5-4CF0-3D9B-A4BF3CA9F2DB}</Project>
-      <Name>AlmostEngine.UltimateScreenshotCreator.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="AlmostEngine.UniversalDevicePreview.Editor.csproj">
-      <Project>{4C5C2EEE-6816-7E4C-F4AB-94D918786761}</Project>
-      <Name>AlmostEngine.UniversalDevicePreview.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="AlmostEngine.ExcludeFromBuildTool.Editor.csproj">
-      <Project>{7CF0AFA2-C12C-8012-17D4-D9733FE91F21}</Project>
-      <Name>AlmostEngine.ExcludeFromBuildTool.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="AlmostEngine.Shared.csproj">
       <Project>{C4EDBBC8-58FA-46E4-D84A-DF6196E30916}</Project>
       <Name>AlmostEngine.Shared</Name>
     </ProjectReference>
-    <ProjectReference Include="AlmostEngine.SimpleLocalization.Editor.csproj">
-      <Project>{C10CACDE-1A63-C1A9-50A5-784DFC4D8CAA}</Project>
-      <Name>AlmostEngine.SimpleLocalization.Editor</Name>
+    <ProjectReference Include="AlmostEngine.csproj">
+      <Project>{EBC9EBAE-762E-E66F-E893-7A65FAF5BCF0}</Project>
+      <Name>AlmostEngine</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
